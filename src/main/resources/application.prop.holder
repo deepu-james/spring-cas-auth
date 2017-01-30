@@ -1,0 +1,10 @@
+server.address=localhost
+# this field is the must with http or https option (what it does here at all?!)
+app.service.security=http://localhost:8080/login/cas
+# this field should correspond to CAS allow pattern
+app.service.home=http://localhost:8080/
+cas.url.prefix=<cas base url>
+cas.service.login=${cas.url.prefix}login
+cas.service.logout=${cas.url.prefix}logout
+# configured admin role
+app.admin.userName=admin
