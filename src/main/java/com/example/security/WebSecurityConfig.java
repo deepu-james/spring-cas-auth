@@ -39,6 +39,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     String CAS_URL_LOGOUT;
     @Value("${cas.url.prefix}")
     String CAS_URL_PREFIX;
+    @Value("${cas.ticket.validate.url}")
+    String CAS_VALIDATE_URL;
     @Value("${app.service.security}")
     String CAS_SERVICE_URL;
     @Value("${app.service.home}")
@@ -84,7 +86,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public Cas20ServiceTicketValidator cas20ServiceTicketValidator() {
-        return new Cas20ServiceTicketValidator(CAS_URL_PREFIX);
+        return new Cas20ServiceTicketValidator(CAS_VALIDATE_URL);
     }
 
     @Bean

@@ -23,7 +23,7 @@ public class CasUserDetails implements UserDetails {
     private List<String> roles = new ArrayList<>();
 
     /**
-     * CAS assertion has empty attributes by default, see attribute principal instead
+     * CAS assertion has empty attributes if CAS protocol v 2.0 is used. Use v 3.0 instead (p3 endpoint)
      * 
      */
     private Assertion casAssertion;

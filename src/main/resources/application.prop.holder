@@ -4,6 +4,8 @@ app.service.security=http://localhost:8080/login/cas
 # this field should correspond to CAS allow pattern
 app.service.home=http://localhost:8080/
 cas.url.prefix=<cas base url>
+# p3 is needed to use CAS protocol v. 3.0 to get attributes
+cas.ticket.validate.url=${cas.url.prefix}p3/
 cas.service.login=${cas.url.prefix}login
 cas.service.logout=${cas.url.prefix}logout
 # configured admin role
